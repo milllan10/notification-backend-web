@@ -7,14 +7,14 @@ const app = express();
 
 // CORS configuration for your frontend URL
 app.use(cors({
-  origin: 'https://notification-web-opal.vercel.app/',  // Replace with your frontend URL
+  origin: 'https://notification-web-opal.vercel.app',  // Replace with your frontend URL
   methods: ['GET', 'POST'],
 }));
 
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: 'https://notification-web-opal.vercel.app/',  // Same frontend URL here
+    origin: 'https://notification-web-opal.vercel.app',  // Same frontend URL here
     methods: ['GET', 'POST'],
   },
 });
