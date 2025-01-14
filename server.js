@@ -4,6 +4,9 @@ const { Server } = require('socket.io');
 const cors = require('cors');
 
 const app = express();
+app.get('/', (req, res) => {
+  res.send('Backend is running');
+});
 
 // CORS configuration for your frontend URL
 app.use(cors({
